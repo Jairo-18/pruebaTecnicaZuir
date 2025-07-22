@@ -1,0 +1,7 @@
+F:\Mis proyectos\PruebaTecnica\publish\PruebaTecnica.exe
+F:\Mis proyectos\PruebaTecnica\publish\appsettings.Development.json
+F:\Mis proyectos\PruebaTecnica\publish\appsettings.json
+F:\Mis proyectos\PruebaTecnica\publish\PruebaTecnica.dll
+F:\Mis proyectos\PruebaTecnica\publish\PruebaTecnica.deps.json
+F:\Mis proyectos\PruebaTecnica\publish\PruebaTecnica.runtimeconfig.json
+F:\Mis proyectos\PruebaTecnica\publish\PruebaTecnica.pdb

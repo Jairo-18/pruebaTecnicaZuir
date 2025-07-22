@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: prueba-tecnica-blazor
+    runtime: docker
+    repo: https://github.com/Jairo-18/prueba-tecnica-zuirsoftware
+    branch: main
+    plan: free
+    envVars:
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:8080
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
