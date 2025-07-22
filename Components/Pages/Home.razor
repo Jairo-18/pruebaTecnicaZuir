@@ -1,0 +1,51 @@
+﻿@page "/"
+@using PruebaTecnica.Services
+@using PruebaTecnica.Models
+@inject DocumentoService DocumentoService
+
+
+ 
+
+<h3>Prueba Técnica </h3>
+
+@if (documentos == null)
+{
+    <p>Cargando...</p>
+}
+else if (documentos.Count == 0)
+{
+    <p>No se encontraron documentos.</p>
+}
+else
+{
+    <span  >Tabla con consumo de la API</span>
+ 
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Descripción</th>
+                <th>Activo</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var doc in documentos)
+            {
+                <tr>
+                    <td>@doc.Codigo</td>
+                    <td>@doc.Descripcion</td>
+                    <td>@(doc.VActiva ? "Sí" : "No")</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private List<DocumentoModel>? documentos;
+
+    protected override async Task OnInitializedAsync()
+    {
+        documentos = await DocumentoService.GetDocumentosAsync();  
+    }
+}
